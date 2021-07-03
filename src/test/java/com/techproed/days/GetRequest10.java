@@ -6,7 +6,6 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -58,7 +57,7 @@ public class GetRequest10 extends TestBaseRestApiExample {
         Collections.sort(ageList);
         Assert.assertEquals(Integer.valueOf("23"), ageList.get(ageList.size()-1));
 
-        List<Integer> salaryList = json.getList("data.findAll{it.employee_salary>350000}.employee_name");
+        List<String> salaryList = json.getList("data.findAll{it.employee_salary>350000}.employee_name");
         System.out.println(salaryList);
         Assert.assertTrue(salaryList.contains("Charde Marshall"));
     }
