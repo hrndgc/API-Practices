@@ -72,7 +72,7 @@ public class GetRequest13 extends TestBaseRestApiExample {
             int age = (int)((Map)((List)actualDataMap.get("data")).get(i)).get("employee_age");
             ageList.add(age);
         }
-        Assert.assertTrue(ageList.containsAll((Collection) expectedData.get("ages")));
+        Assert.assertTrue(ageList.containsAll((List) expectedData.get("ages")));
 
 
       Assert.assertEquals(expectedData.get("employee11"), ((List)actualDataMap.get("data")).get(10));

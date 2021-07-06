@@ -51,4 +51,22 @@ public class TestDataRestApiExample {
 
         return expectedDataMap;
     }
+
+
+    public HashMap<String, Integer> setUpTestData2(){
+            /*
+            Status kodun 200 olduğunu,
+            En yüksek maaşın 725000 olduğunu,
+            En küçük yaşın 19 olduğunu,
+            İkinci en yüksek maaşın 675000
+             */
+            HashMap<String, Integer> expectedData2 = new HashMap<String, Integer>();
+            expectedData2.put("statusCode", 200);
+            expectedData2.put("maxSalary", 725000);
+            expectedData2.put("minAge", 19);
+            expectedData2.put("maxSalary2", 675000);
+
+            return expectedData2;
+    }
+
 }
